@@ -50,11 +50,11 @@ document.getElementById('year').textContent=new Date().getFullYear();
 const DOI={"Globularity-selected large molecules for a new generation of multication perovskites":"10.1002/adma.201702005","Highly Efficient and Stable Perovskite Solar Cells based on a Low-Cost Carbon Cloth":"10.1002/aenm.201601116","Halide perovskites in wide-spectrum photodetection":"10.1002/bkcs.70157","Interfacial Defect Passivation by Molecular Dipole-Moment Engineering in Perovskite Solar Cells":"10.1002/smsc.70369"};
 const paperLink=t=>DOI[t]?"https://doi.org/"+DOI[t]:"https://scholar.google.com/scholar?q="+encodeURIComponent(t);
 const featured=[
+ {title:"Enhancing Efficiency of Perovskite Solar Cells via N-doped Graphene: Crystal Modification and Surface Passivation",journal:"Advanced Materials 28, 8681–8686 · 2016",doi:"",badge:""},
+ {title:"Effect of Cation Composition on the Mechanical Stability of Perovskite Solar Cells",journal:"Advanced Energy Materials 8, 1702116 · 2018",doi:"",badge:""},
  {title:"Globularity-selected large molecules for a new generation of multication perovskites",journal:"Advanced Materials 29(38), 1702005 · 2017",doi:"",badge:""},
  {title:"Highly Efficient and Stable Perovskite Solar Cells based on a Low-Cost Carbon Cloth",journal:"Advanced Energy Materials 6(20), 1601116 · 2016",doi:"",badge:""},
- {title:"From exceptional properties to stability challenges of perovskite solar cells",journal:"Small 14(46), 1802385 · 2018",doi:"",badge:""},
- {title:"Photoelectrochemical Water-splitting Using CuO Based Electrodes for Hydrogen Production: A review",journal:"Advanced Materials 33, 2007285 · 2021",doi:"",badge:""},
- {title:"Recent advances in plasmonic perovskite solar cells",journal:"Advanced Science 7(13), 1902448 · 2020",doi:"",badge:""},
+ {title:"Interfacial Defect Passivation by Molecular Dipole-Moment Engineering in Perovskite Solar Cells",journal:"Small Science 6 · 2026",doi:"",badge:""},
  {title:"High Coordination-Solvent Bathing for Efficient Crystallization of MA-free Triple Halide Perovskite Solar Cells",journal:"EES Solar 1, 30–40 · 2025",doi:"",badge:""}
 ];
 document.getElementById('feat').innerHTML=featured.map(p=>`<article class="fcard"><div class="fbody">${p.badge?`<span class="badge">${p.badge}</span>`:''}<h3>${p.title}</h3><div class="meta">${p.journal}</div><a class="btn secondary" target="_blank" rel="noreferrer" href="${paperLink(p.title)}">${DOI[p.title]?"Read paper":"Find paper"} ↗</a></div></article>`).join('');
